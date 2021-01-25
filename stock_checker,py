@@ -31,13 +31,14 @@ message = "PS5 RESTOCK" #you can change this to whatever you want
 password = "[your password]"
 msg['From'] = '[your email]'
 msg['To'] = '[targets email]' #set this equal to ['From'] email to send yourself the stock alert
-#msg['From2'] = 'additional email' to add another email
+#msg['To2'] = 'additional email' to add another email
 msg['Subject'] = "custom message (e.g. link to amamzon)"
 msg.attach(MIMEText(message, 'plain'))
 
 #send email
 server.sendmail(msg['From'], msg['To'], msg.as_string())
-#server.sendmail(msg['From2'], msg['To'], msg.as_string()) (only if you have muliple targets)
+#server.sendmail(msg['From'], msg['To2'], msg.as_string()) (only if you have muliple targets)
 server.quit()
 
 print ("successfully sent email to: %s" % (msg['To']))
+print ("successfully sent email to: %s" % (msg['To2']))
