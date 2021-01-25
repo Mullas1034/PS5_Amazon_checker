@@ -27,12 +27,12 @@ while True:
 
 #create the message for the email
 msg = MIMEMultipart()
-message = "PS5 RESTOCK" #you can change this to whatever you want
+message = "AMAZON LINK" #you can change this to whatever you want
 password = "[your password]"
 msg['From'] = '[your email]'
 msg['To'] = '[targets email]' #set this equal to ['From'] email to send yourself the stock alert
 #msg['To2'] = 'additional email' to add another email
-msg['Subject'] = "custom message (e.g. link to amamzon)"
+msg['Subject'] = "PS5 RESTOCK"
 msg.attach(MIMEText(message, 'plain'))
 
 #send email
